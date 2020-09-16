@@ -4,6 +4,11 @@
 *.dll
 *.so
 *.dylib
+*.xml
+
+# Logs
+logs
+*.log
 
 # Test binary, built with `go test -c`
 *.test
@@ -13,3 +18,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/

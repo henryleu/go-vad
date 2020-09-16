@@ -1,0 +1,6 @@
+github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b h1:msr2FFVIdU7/cqZEFwsE56Ic2FUipaNuCTl6/ByuQ9E=
+github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b/go.mod h1:Mq6kWYMOmZ4FfVxouvXxFGWkN7ryt0e3fcLu39X2sPs=
+github.com/henryleu/go-webrtcvad v0.0.0-20160913155855-e9f766234143 h1:iyo0FPPcpzpKqCcLXDkAifVA/UNJydgDZgmUClnlWOY=
+github.com/henryleu/go-webrtcvad v0.0.0-20160913155855-e9f766234143/go.mod h1:nUBlgpjV9IaviuiGrDLCaGN29eff8XfHSiw2WsQW0HM=
+github.com/maxhawkins/go-webrtcvad v0.0.0-20160913155855-e9f766234143 h1:+UX9Tamq5NNPy6T/GUtKqmElJZY+JktaD2ZESAeqPh0=
+github.com/maxhawkins/go-webrtcvad v0.0.0-20160913155855-e9f766234143/go.mod h1:YdrZ05xnooeP54y7m+/UvI23O1Td46PjWkLJu1VLObM=
