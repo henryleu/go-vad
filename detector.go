@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	webrtcvad "github.com/maxhawkins/go-webrtcvad"
+	webrtcvad "github.com/henryleu/go-webrtcvad"
 )
 
 // State is the detector's status during voice activity detecting
@@ -234,12 +234,10 @@ func (d *Detector) emitVoiceEnd() {
 		return
 	}
 	d.Events <- &Event{Type: EventVoiceEnd, Clip: d.Clip}
-	// close(d.Events)
 }
 
 func (d *Detector) emitNoinput() {
 	d.Events <- &Event{Type: EventNoinput, Clip: d.Clip}
-	// close(d.Events)
 }
 
 // Process process the frame of incoming voice samples and generate detection event
@@ -307,7 +305,8 @@ func (d *Detector) Process(frame []byte) error {
 		if result {
 			d.vadSampleCount++
 		}
-		if result || float32(d.vadSampleCount/d.sampleCount) > topSampleRatio {
+		if result {
+			// if result || float32(d.vadSampleCount/d.sampleCount) > topSampleRatio {
 			if d.duration >= d.SpeechTimeout {
 				// finally detected activity
 				d.startSpeech()
