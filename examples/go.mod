@@ -7,8 +7,9 @@ require (
 	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
 	github.com/gopherjs/gopherwasm v1.1.0 // indirect
 	github.com/hajimehoshi/oto v0.6.4 // indirect
-	github.com/henryleu/go-vad v0.0.0-20200916053458-d88452eed420
+	github.com/henryleu/go-vad v0.0.0-20200916081859-8a617f0aa863
 	github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b
+	github.com/maxhawkins/go-webrtcvad v0.0.0-20160913155855-e9f766234143 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/spf13/afero v1.4.0
 	golang.org/x/exp v0.0.0-20200915172826-20d5ce0eab31 // indirect

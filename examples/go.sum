@@ -22,8 +22,11 @@ github.com/hajimehoshi/oto v0.6.4 h1:mrYgkuReD1rKty9PJ7xUR9VKGgvf7nAzi3NAHsD8nKE
 github.com/hajimehoshi/oto v0.6.4/go.mod h1:0QXGEkbuJRohbJaxr7ZQSxnju7hEhseiPx2hrh6raOI=
 github.com/henryleu/go-vad v0.0.0-20200916053458-d88452eed420 h1:B7JZIK30w00Qa4puzIHwZKbyUbCpot9PUhrix/bWhcg=
 github.com/henryleu/go-vad v0.0.0-20200916053458-d88452eed420/go.mod h1:wHpniJ8RgyaV3GcMxF/WLnmpNYPgWysqm5QhUYMjr/8=
+github.com/henryleu/go-vad v0.0.0-20200916081859-8a617f0aa863 h1:/Xucv84pq6oVTxNFErp/WFd/tNCpNjGP79pBbYot5CA=
+github.com/henryleu/go-vad v0.0.0-20200916081859-8a617f0aa863/go.mod h1:sgfYJ4t8cBzoVSgEx8/hZzc/mTO2KYHOksKzCSV/XCY=
 github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b h1:msr2FFVIdU7/cqZEFwsE56Ic2FUipaNuCTl6/ByuQ9E=
 github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b/go.mod h1:Mq6kWYMOmZ4FfVxouvXxFGWkN7ryt0e3fcLu39X2sPs=
+github.com/henryleu/go-webrtcvad v0.0.0-20160913155855-e9f766234143 h1:iyo0FPPcpzpKqCcLXDkAifVA/UNJydgDZgmUClnlWOY=
 github.com/henryleu/go-webrtcvad v0.0.0-20160913155855-e9f766234143/go.mod h1:nUBlgpjV9IaviuiGrDLCaGN29eff8XfHSiw2WsQW0HM=
 github.com/jfreymuth/oggvorbis v1.0.0/go.mod h1:abe6F9QRjuU9l+2jek3gj46lu40N4qlYxh2grqkLEDM=
 github.com/jfreymuth/vorbis v1.0.0/go.mod h1:8zy3lUAm9K/rJJk223RKy6vjCZTWC61NA2QD06bfOE0=

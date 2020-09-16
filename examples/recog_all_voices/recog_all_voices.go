@@ -30,8 +30,8 @@ func main() {
 	c.BytesPerSample = int(r.FmtChunk.Data.BitsPerSamples / 8)
 	// 设置一下参数效果最佳
 	c.SilenceTimeout = 500
-	c.SpeechTimeout = 100
-	c.VADLevel = 0
+	c.SpeechTimeout = 500
+	c.VADLevel = 2
 	log.Printf("vad level: %v\n", c.VADLevel)
 	c.Multiple = true
 	err = c.Validate()

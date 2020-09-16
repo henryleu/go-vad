@@ -306,8 +306,7 @@ func (d *Detector) Process(frame []byte) error {
 			d.vadSampleCount++
 		}
 		if result {
-			// if result || float32(d.vadSampleCount/d.sampleCount) > topSampleRatio {
-			if d.duration >= d.SpeechTimeout {
+			if result || float32(d.vadSampleCount/d.sampleCount) > topSampleRatio {
 				// finally detected activity
 				d.startSpeech()
 				d.setState(StateActivity)
