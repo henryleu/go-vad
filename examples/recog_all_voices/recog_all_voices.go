@@ -17,8 +17,8 @@ func main() {
 		}
 	}()
 
-	// fn := "../data/8ef79f2695c811ea.wav"
-	fn := "../data/tts-01.wav"
+	fn := "../data/8ef79f2695c811ea.wav"
+	// fn := "../data/tts-01.wav"
 
 	r, err := wav.NewReaderFromFile(fn)
 	if err != nil {
@@ -29,9 +29,9 @@ func main() {
 	c.SampleRate = int(r.FmtChunk.Data.SamplesPerSec)
 	c.BytesPerSample = int(r.FmtChunk.Data.BitsPerSamples / 8)
 	// 设置一下参数效果最佳
-	c.SilenceTimeout = 500
-	c.SpeechTimeout = 500
-	c.VADLevel = 2
+	c.SilenceTimeout = 800
+	c.SpeechTimeout = 800
+	c.VADLevel = 3
 	log.Printf("vad level: %v\n", c.VADLevel)
 	c.Multiple = true
 	err = c.Validate()

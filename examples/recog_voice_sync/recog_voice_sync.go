@@ -12,13 +12,14 @@ import (
 
 func main() {
 	// fn := "../data/8ef79f2695c811ea.wav"
-	fn := "../data/tts-01.wav"
-	// fn := "../data/haichao_test_01.wav"
+	// fn := "../data/tts-01.wav"
+	fn := "../data/haichao_test_01.wav"
 
 	r, err := wav.NewReaderFromFile(fn)
 	if err != nil {
 		log.Fatalf("wav.NewReader() error = %v", err)
 	}
+	log.Println("SamplesPerSec", r.FmtChunk.Data.SamplesPerSec)
 	examples.InitSpeaker(int(r.FmtChunk.Data.SamplesPerSec), 100)
 
 	c := vad.NewDefaultConfig()
@@ -27,11 +28,11 @@ func main() {
 	log.Println("SampleRate", c.SampleRate)
 	log.Println("BytesPerSample", c.BytesPerSample)
 	// 设置一下参数效果最佳
-	c.SilenceTimeout = 500
+	c.SilenceTimeout = 400
 	c.SpeechTimeout = 500
 	c.NoinputTimeout = 20000
 	c.RecognitionTimeout = 10000
-	c.VADLevel = 2
+	c.VADLevel = 1
 
 	err = c.Validate()
 	if err != nil {
@@ -78,7 +79,11 @@ events_loop:
 			e.Clip.SaveToWriter(f)
 			e.Clip.PrintDetail()
 			log.Println(len(e.Clip.Data))
-			log.Println("digest", e.Clip.GenerateDigest())
+			log.Println("clip digest", e.Clip.GenerateDigest())
+
+			tc := d.GetTotalClip()
+			tc.PrintDetail()
+			log.Println("total clip degest", tc.GenerateDigest())
 
 			wn := f.Name()
 			rf, err := examples.OpenFile(wn)
