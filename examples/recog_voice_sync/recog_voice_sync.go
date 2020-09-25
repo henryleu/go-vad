@@ -12,8 +12,8 @@ import (
 
 func main() {
 	// fn := "../data/8ef79f2695c811ea.wav"
-	// fn := "../data/tts-01.wav"
-	fn := "../data/haichao_test_01.wav"
+	fn := "../data/tts-01.wav"
+	// fn := "../data/haichao_test_01.wav"
 
 	r, err := wav.NewReaderFromFile(fn)
 	if err != nil {
@@ -24,10 +24,13 @@ func main() {
 	c := vad.NewDefaultConfig()
 	c.SampleRate = int(r.FmtChunk.Data.SamplesPerSec)
 	c.BytesPerSample = int(r.FmtChunk.Data.BitsPerSamples / 8)
+	log.Println("SampleRate", c.SampleRate)
+	log.Println("BytesPerSample", c.BytesPerSample)
 	// 设置一下参数效果最佳
 	c.SilenceTimeout = 500
 	c.SpeechTimeout = 500
 	c.NoinputTimeout = 20000
+	c.RecognitionTimeout = 10000
 	c.VADLevel = 2
 
 	err = c.Validate()
@@ -54,9 +57,12 @@ func main() {
 		err = d.Process(frame)
 		if err != nil {
 			log.Fatalf("Detector.Process() error = %v", err)
+			d.Finalize()
+			break
 		}
 		if !d.Working() {
 			log.Println("detector is stopped")
+			d.Finalize()
 			break
 		}
 	}
@@ -70,7 +76,10 @@ events_loop:
 			log.Println("voice end")
 			f, err := examples.NewFile()
 			e.Clip.SaveToWriter(f)
+			e.Clip.PrintDetail()
 			log.Println(len(e.Clip.Data))
+			log.Println("digest", e.Clip.GenerateDigest())
+
 			wn := f.Name()
 			rf, err := examples.OpenFile(wn)
 			if err != nil {

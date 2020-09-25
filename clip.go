@@ -1,6 +1,8 @@
 package vad
 
 import (
+	"crypto/sha256"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -61,6 +63,14 @@ func (c *Clip) SaveToWriter(wc io.WriteCloser) error {
 	}
 
 	return nil
+}
+
+// GenerateDigest generates a sha256 hash of voice data as hex string
+func (c *Clip) GenerateDigest() string {
+	h := sha256.New()
+	h.Write(c.Data)
+	bs := h.Sum(nil)
+	return fmt.Sprintf("%x", bs)
 }
 
 // PrintDetail prints detailed properties of the clip

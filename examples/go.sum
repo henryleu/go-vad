@@ -28,13 +28,13 @@ github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b h1:msr2FFVIdU7/cqZ
 github.com/henryleu/go-wav v0.0.0-20200916035820-670a6e7b535b/go.mod h1:Mq6kWYMOmZ4FfVxouvXxFGWkN7ryt0e3fcLu39X2sPs=
 github.com/henryleu/go-webrtcvad v0.0.0-20160913155855-e9f766234143 h1:iyo0FPPcpzpKqCcLXDkAifVA/UNJydgDZgmUClnlWOY=
 github.com/henryleu/go-webrtcvad v0.0.0-20160913155855-e9f766234143/go.mod h1:nUBlgpjV9IaviuiGrDLCaGN29eff8XfHSiw2WsQW0HM=
+github.com/henryleu/go-webrtcvad v0.0.0-20200925082944-0ae41bfc2df6 h1:KOfA+R61Kik0rAcesaNTDeDtbwcFS5DTR34/6Ex8KDA=
+github.com/henryleu/go-webrtcvad v0.0.0-20200925082944-0ae41bfc2df6/go.mod h1:U1d6Q1v/NrRDo4lSYdakh1m8LW/3oTHUhDzHBRgFlWw=
 github.com/jfreymuth/oggvorbis v1.0.0/go.mod h1:abe6F9QRjuU9l+2jek3gj46lu40N4qlYxh2grqkLEDM=
 github.com/jfreymuth/vorbis v1.0.0/go.mod h1:8zy3lUAm9K/rJJk223RKy6vjCZTWC61NA2QD06bfOE0=
 github.com/kr/fs v0.1.0/go.mod h1:FFnZGqtBN9Gxj7eW1uZ42v5BccTP0vu6NEaFoC2HwRg=
 github.com/lucasb-eyer/go-colorful v0.0.0-20181028223441-12d3b2882a08/go.mod h1:NXg0ArsFk0Y01623LgUqoqcouGDB+PwCCQlrwrG6xJ4=
 github.com/mattn/go-runewidth v0.0.4/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzpuz5H//U1FU=
-github.com/maxhawkins/go-webrtcvad v0.0.0-20160913155855-e9f766234143 h1:+UX9Tamq5NNPy6T/GUtKqmElJZY+JktaD2ZESAeqPh0=
-github.com/maxhawkins/go-webrtcvad v0.0.0-20160913155855-e9f766234143/go.mod h1:YdrZ05xnooeP54y7m+/UvI23O1Td46PjWkLJu1VLObM=
 github.com/mewkiz/flac v1.0.5/go.mod h1:EHZNU32dMF6alpurYyKHDLYpW1lYpBZ5WrXi/VuNIGs=
 github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
