@@ -1,2 +1,2 @@
-# middle school student learns to code
-
+# go-vad
+golang vad (voice activity detection) library based on webrtc
