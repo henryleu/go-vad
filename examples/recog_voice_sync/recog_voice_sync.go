@@ -13,7 +13,9 @@ import (
 func main() {
 	// fn := "../data/8ef79f2695c811ea.wav"
 	// fn := "../data/tts-01.wav"
-	fn := "../data/haichao_test_01.wav"
+	// fn := "../data/haichao_test_01.wav"
+	// fn := "../data/audio_0310/4CC637FF414D42E5BF013794886489E2.wav"
+	fn := "../data/audio_0310/8BD42A27A2334E55878341201D616C2F.wav"
 
 	r, err := wav.NewReaderFromFile(fn)
 	if err != nil {
@@ -81,6 +83,7 @@ events_loop:
 			log.Println(len(e.Clip.Data))
 			log.Println("clip digest", e.Clip.GenerateDigest())
 
+			log.Println()
 			tc := d.GetTotalClip()
 			tc.PrintDetail()
 			log.Println("total clip degest", tc.GenerateDigest())
