@@ -147,6 +147,15 @@ func (d *Detector) Init() error {
 	return nil
 }
 
+// Initialize initiates vad and related fields
+func (d *Detector) Initialize(vad *webrtcvad.VAD) {
+	d.vad = vad
+
+	// calc bytes per unit (millisecond and frame)
+	d.bytesPerMillisecond = d.BytesPerMillisecond()
+	d.bytesPerFrame = d.BytesPerFrame()
+}
+
 // BytesPerMillisecond calc and return bytesPerMillisecond
 func (d *Detector) BytesPerMillisecond() int {
 	return d.SampleRate * d.BytesPerSample / 1000
@@ -299,7 +308,6 @@ func (d *Detector) Process(frame []byte) error {
 			d.vadSampleCount = 0
 			d.setState(StateActivityTransition)
 		}
-		break
 	case StateActivityTransition:
 		d.sampleCount++
 		if result {
@@ -316,7 +324,6 @@ func (d *Detector) Process(frame []byte) error {
 			// fall back to inactivity
 			d.setState(StateInactivity)
 		}
-		break
 	case StateActivity:
 		if !result {
 			// start to detect inactivity
@@ -324,7 +331,6 @@ func (d *Detector) Process(frame []byte) error {
 			d.vadSampleCount = 0
 			d.setState(StateInactivityTransition)
 		}
-		break
 	case StateInactivityTransition:
 		d.sampleCount++
 		if result {
@@ -342,7 +348,6 @@ func (d *Detector) Process(frame []byte) error {
 				d.emitVoiceEnd()
 			}
 		}
-		break
 	}
 	return nil
 }

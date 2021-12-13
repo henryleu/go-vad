@@ -17,8 +17,9 @@ func main() {
 		}
 	}()
 
-	fn := "../data/8ef79f2695c811ea.wav"
+	// fn := "../data/8ef79f2695c811ea.wav"
 	// fn := "../data/tts-01.wav"
+	fn := "../data/gongan/voiceVideo/jc_test_2_8k_16bit.wav"
 
 	r, err := wav.NewReaderFromFile(fn)
 	if err != nil {

@@ -50,7 +50,9 @@ func (c *Clip) SaveToWriter(wc io.WriteCloser) error {
 	}
 
 	w, err := wav.NewWriter(param)
-	defer w.Close()
+	defer func() {
+		w.Close()
+	}()
 	if err != nil {
 		log.Printf("Fail to create a new wave clip writer, error: %v", err)
 		return err

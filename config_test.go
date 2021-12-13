@@ -141,20 +141,8 @@ func TestConfig_NewDetector(t *testing.T) {
 		want   *Detector
 	}{
 		{
-			name: "Config.NewDetector - use default config",
-			fields: fields{
-				SpeechTimeout:      defaultConfig.SpeechTimeout,
-				SilenceTimeout:     defaultConfig.SilenceTimeout,
-				NoinputTimeout:     defaultConfig.NoinputTimeout,
-				NoinputTimers:      defaultConfig.NoinputTimers,
-				RecognitionTimeout: defaultConfig.RecognitionTimeout,
-				RecognitionTimers:  defaultConfig.RecognitionTimers,
-				VADLevel:           defaultConfig.VADLevel,
-				SampleRate:         defaultConfig.SampleRate,
-				BytesPerSample:     defaultConfig.BytesPerSample,
-				FrameDuration:      defaultConfig.FrameDuration,
-				Multiple:           defaultConfig.Multiple,
-			},
+			name:   "Config.NewDetector - use default config",
+			fields: fields(defaultConfig),
 			want: &Detector{
 				Config:              c,
 				state:               StateInactivity,
@@ -169,7 +157,7 @@ func TestConfig_NewDetector(t *testing.T) {
 				bytesPerFrame:       0,
 				vad:                 nil,
 				work:                true,
-				Events:              make(chan *Event, 0),
+				Events:              make(chan *Event),
 				cache:               make([]byte, 0, cacheCap),
 				Clips:               make([]*Clip, 0, 1),
 			},

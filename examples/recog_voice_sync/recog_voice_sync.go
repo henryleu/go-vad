@@ -15,7 +15,8 @@ func main() {
 	// fn := "../data/tts-01.wav"
 	// fn := "../data/haichao_test_01.wav"
 	// fn := "../data/audio_0310/4CC637FF414D42E5BF013794886489E2.wav"
-	fn := "../data/audio_0310/8BD42A27A2334E55878341201D616C2F.wav"
+	// fn := "../data/audio_0310/8BD42A27A2334E55878341201D616C2F.wav"
+	fn := "../data/gongan/voiceVideo/jc_test_1_8k_16bit.wav"
 
 	r, err := wav.NewReaderFromFile(fn)
 	if err != nil {
